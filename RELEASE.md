@@ -25,6 +25,8 @@ This version of the CY8CPROTO-062-4343W BSP was validated for compatibility with
 * [CY8CPROTO-062-4343W BSP API Reference Manual][api]
 * [CY8CPROTO-062-4343W Documentation](http://www.cypress.com/CY8CPROTO-062-4343W)
 * [Cypress Semiconductor](http://www.cypress.com)
+* [Cypress Semiconductor GitHub](https://github.com/cypresssemiconductorco)
+* [ModusToolbox](https://www.cypress.com/products/modustoolbox-software-environment)
 
 [api]: modules.html
 
