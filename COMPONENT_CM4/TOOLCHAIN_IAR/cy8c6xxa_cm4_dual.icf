@@ -1,6 +1,6 @@
 /***************************************************************************//**
 * \file cy8c6xxa_cm4_dual.icf
-* \version 2.60
+* \version 2.70
 *
 * Linker file for the IAR compiler.
 *
@@ -127,7 +127,7 @@ if (!isdefinedsymbol(__HEAP_SIZE)) {
 }
 /**** End of ICF editor section. ###ICF###*/
 
-/* Size of the Cortex-M0+ application image */
+/* The size of the Cortex-M0+ application image */
 define symbol FLASH_CM0P_SIZE  = 0x2000;
 
 define memory mem with size = 4G;
