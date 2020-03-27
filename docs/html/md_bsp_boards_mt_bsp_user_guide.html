@@ -67,7 +67,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('group__group__bsp__settings.html','');});
+$(document).ready(function(){initNavTree('md_bsp_boards_mt_bsp_user_guide.html','');});
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -87,38 +87,40 @@ $(document).ready(function(){initNavTree('group__group__bsp__settings.html','');
 
 <div class="header">
   <div class="headertitle">
-<div class="title">BSP Settings</div>  </div>
+<div class="title">ModusToolbox Board Support Package (BSP) Overview </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="category">Peripheral Default HAL Settings:</div> <table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadCenter">Resource  </th><th class="markdownTableHeadCenter">Parameter  </th><th class="markdownTableHeadCenter">Value  </th><th class="markdownTableHeadLeft">Remarks   </th></tr>
-<tr class="markdownTableBody" class="markdownTableRowOdd">
-<td class="markdownTableBodyCenter" rowspan="4">ADC  </td><td class="markdownTableBodyCenter">VREF  </td><td class="markdownTableBodyCenter">1.2 V  </td><td class="markdownTableBodyLeft"></td></tr>
-<tr class="markdownTableBody" class="markdownTableRowEven">
-<td class="markdownTableBodyCenter">Measurement type  </td><td class="markdownTableBodyCenter">Single Ended  </td><td class="markdownTableBodyLeft"></td></tr>
-<tr class="markdownTableBody" class="markdownTableRowOdd">
-<td class="markdownTableBodyCenter">Input voltage range  </td><td class="markdownTableBodyCenter">0 to 2.4 V (0 to 2*VREF)  </td><td class="markdownTableBodyLeft"></td></tr>
-<tr class="markdownTableBody" class="markdownTableRowEven">
-<td class="markdownTableBodyCenter">Output range  </td><td class="markdownTableBodyCenter">0x000 to 0x7FF  </td><td class="markdownTableBodyLeft"></td></tr>
-<tr class="markdownTableBody" class="markdownTableRowOdd">
-<td class="markdownTableBodyCenter" rowspan="4">DAC  </td><td class="markdownTableBodyCenter">Reference source  </td><td class="markdownTableBodyCenter">VDDA  </td><td class="markdownTableBodyLeft"></td></tr>
-<tr class="markdownTableBody" class="markdownTableRowEven">
-<td class="markdownTableBodyCenter">Input range  </td><td class="markdownTableBodyCenter">0x000 to 0xFFF  </td><td class="markdownTableBodyLeft"></td></tr>
-<tr class="markdownTableBody" class="markdownTableRowOdd">
-<td class="markdownTableBodyCenter">Output range  </td><td class="markdownTableBodyCenter">0 to VDDA  </td><td class="markdownTableBodyLeft"></td></tr>
-<tr class="markdownTableBody" class="markdownTableRowEven">
-<td class="markdownTableBodyCenter">Output type  </td><td class="markdownTableBodyCenter">Unbuffered output  </td><td class="markdownTableBodyLeft"></td></tr>
-<tr class="markdownTableBody" class="markdownTableRowOdd">
-<td class="markdownTableBodyCenter" rowspan="3">I2C  </td><td class="markdownTableBodyCenter">Role  </td><td class="markdownTableBodyCenter">Master  </td><td class="markdownTableBodyLeft">Configurable to slave mode through HAL function   </td></tr>
-<tr class="markdownTableBody" class="markdownTableRowEven">
-<td class="markdownTableBodyCenter">Data rate  </td><td class="markdownTableBodyCenter">100 kbps  </td><td class="markdownTableBodyLeft">Configurable through HAL function   </td></tr>
-<tr class="markdownTableBody" class="markdownTableRowOdd">
-<td class="markdownTableBodyCenter">Drive mode of SCL &amp; SDA pins  </td><td class="markdownTableBodyCenter">Open Drain (drives low)  </td><td class="markdownTableBodyLeft">External pull-up resistors are required   </td></tr>
-</table>
-<p>| LpTimer | Uses WCO (32.768 kHz) as clock source &amp; MCWDT as counter. </p>
-<p>1 count = 1/32768 second or 32768 counts = 1 second. ||| | SPI | Data rate | 100 kpbs | Configurable through HAL function | | ^ | Slave select polarity | Active low | | | UART | Flow control | No flow control | Configurable through HAL function | | ^ | Data format | 8N1 | Configurable through HAL function | | ^ | Baud rate | 115200 | Configurable through HAL function | </p>
-</div><!-- contents -->
+<div class="textblock"><h2>Introduction</h2>
+<p>A Board Support Package (BSP) provides a standard interface to a board's features and capabilities. The API is consistent across Cypress kits. Other software (such as middleware or the user's application) can use the BSP to configure and control the hardware. BSPs have the following characteristics:</p>
+<ul>
+<li>BSPs initialize device resources, such as clocks and power supplies to set up the device to run firmware.</li>
+<li>BSPs contain linker scripts and startup code so you can customize them for your board.</li>
+<li>BSPs contain the hardware configuration (structures and macros) for both device peripherals and board peripherals.</li>
+<li>BSPs provide abstraction to the board by providing common aliases or names to refer to the board peripherals, such as buttons and LEDs.</li>
+<li>BSPs include the libraries for the default capabilities on the board. For example, the BSP for a kit with CapSense capabilities includes the CapSense library.</li>
+</ul>
+<p>For a complete description of what the BSP provides and how it is used within ModusToolbox, see the <a href="http://www.cypress.com/ModusToolboxUserGuide">ModusToolbox User Guide</a></p>
+<h2>Quick Start with BSPs</h2>
+<p>This section provides a high-level view for using BSPs. You should be familiar with creating an application using both the ModusToolbox IDE and command-line environments. To use a BSP for a Cypress kit you need to perform the following steps:</p><ol type="1">
+<li>Get a BSP using one of the following methods:<ul>
+<li>Create an application with the Project Creation tool included with the ModusToolbox software installer (<em>&lt; ModusToolbox install&gt;/tools_2.x/project-creator</em>). This tool can also be launched from the Eclipse IDE for ModusToolbox. The tool fetches the BSP for the kit that you selected, and places it in the <em>libs</em> directory.</li>
+<li>In an existing application, use the Library Manager tool to fetch the required BSP. This tool is located in <em>&lt; ModusToolbox install &gt;/tools_2.x/library-manager</em>. You can also launch it from within the ModusToolbox IDE.</li>
+<li>In an existing application, create a .lib file specifying the BSP and version (commit, tag, or branch). Then run <code>make getlibs</code> to fetch the BSP and any associated libraries. The .lib file typically goes in the deps directory.</li>
+<li>In an existing application, clone the Cypress BSP GitHub repository using the git clone command. For example: <code>git clone [<a href="https://github.com/cypresssemiconductorco/TARGET_CY8CPROTO-062-4343W/#latest-v1.X">https://github.com/cypresssemiconductorco/TARGET_CY8CPROTO-062-4343W/#latest-v1.X</a>]</code> A BSP includes other libraries. To fetch all the libraries, use the <code>make getlibs</code> command from a command shell in the top directory of the application.</li>
+</ul>
+</li>
+<li>Add #<code>include "cybsp.h"</code> to your <em>main.c</em> file.</li>
+<li>Add <code><a class="el" href="group__group__bsp__functions.html#gab989986b285e127f78f61c29f6ccbbfa" title="Initialize all hardware on the board. ">cybsp_init()</a></code> at the start of <code>main()</code>.</li>
+<li>Refer to the API documentation available inside that BSP <em>docs</em> directory to learn more.</li>
+</ol>
+<h2>References</h2>
+<ul>
+<li><a href="https://www.cypress.com/products/modustoolbox-software-environment">ModusToolbox</a></li>
+<li><a href="http://www.cypress.com/ModusToolboxUserGuide">ModusToolbox User Guide</a></li>
+<li><a href="http://www.cypress.com">Cypress Semiconductor</a></li>
+<li><a href="https://github.com/cypresssemiconductorco">Cypress Semiconductor GitHub</a> </li>
+</ul>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part
 <div id="nav-path" class="navpath">
