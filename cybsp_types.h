@@ -263,6 +263,45 @@ extern "C" {
 #define CYBSP_QSPI_SCK              (P11_7)
 #endif
 
+/** Pin: PDM PCM CLK */
+#ifndef CYBSP_PDM_CLK
+#define CYBSP_PDM_CLK               (P10_4)
+#endif
+/** Pin PDM PCM DATA */
+#ifndef CYBSP_PDM_DATA
+#define CYBSP_PDM_DATA              (P10_5)
+#endif
+
+/** Pin: I2S MCLK */
+#ifndef CYBSP_I2S_MCLK
+#define CYBSP_I2S_MCLK              (P5_0)
+#endif
+/** Pin: I2S TX SCK */
+#ifndef CYBSP_I2S_TX_SCK
+#define CYBSP_I2S_TX_SCK            (P5_1)
+#endif
+/** Pin: I2S TX WS */
+#ifndef CYBSP_I2S_TX_WS
+#define CYBSP_I2S_TX_WS             (P5_2)
+#endif
+/** Pin: I2S TX DATA */
+#ifndef CYBSP_I2S_TX_DATA
+#define CYBSP_I2S_TX_DATA           (P5_3)
+#endif
+/** Pin: I2S RX SCK */
+#ifndef CYBSP_I2S_RX_SCK
+#define CYBSP_I2S_RX_SCK            (P5_4)
+#endif
+/** Pin: I2S RX WS */
+#ifndef CYBSP_I2S_RX_WS
+#define CYBSP_I2S_RX_WS             (P5_5)
+#endif
+/** Pin: I2S RX DATA */
+#ifndef CYBSP_I2S_RX_DATA
+#define CYBSP_I2S_RX_DATA           (P5_6)
+#endif
+
+
 /** Host-wake GPIO drive mode */
 #define CYBSP_WIFI_HOST_WAKE_GPIO_DM (CYHAL_GPIO_DRIVE_ANALOG)
 /** Host-wake IRQ event */
