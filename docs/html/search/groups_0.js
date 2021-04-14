@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['arduino_20header_20pins',['Arduino Header Pins',['../group__group__bsp__pins__arduino.html',1,'']]]
+  ['bluetooth_20configuration_20structure',['Bluetooth Configuration Structure',['../group__group__bsp__bt.html',1,'']]],
+  ['button_20pins',['Button Pins',['../group__group__bsp__pins__btn.html',1,'']]]
 ];
