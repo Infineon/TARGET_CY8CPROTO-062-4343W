@@ -63,11 +63,11 @@ See the [BSP API Reference Manual][api] for the complete list of the provided in
 * [CY8CPROTO-062-4343W BSP API Reference Manual][api]
 * [CY8CPROTO-062-4343W Documentation](http://www.cypress.com/CY8CPROTO-062-4343W)
 * [Cypress Semiconductor, an Infineon Technologies Company](http://www.cypress.com)
-* [Cypress Semiconductor GitHub](https://github.com/cypresssemiconductorco)
+* [Infineon GitHub](https://github.com/infineon)
 * [ModusToolbox](https://www.cypress.com/products/modustoolbox-software-environment)
 
-[api]: https://cypresssemiconductorco.github.io/TARGET_CY8CPROTO-062-4343W/html/modules.html
-[settings]: https://cypresssemiconductorco.github.io/TARGET_CY8CPROTO-062-4343W/html/md_bsp_settings.html
+[api]: https://infineon.github.io/TARGET_CY8CPROTO-062-4343W/html/modules.html
+[settings]: https://infineon.github.io/TARGET_CY8CPROTO-062-4343W/html/md_bsp_settings.html
 
 ---
-© Cypress Semiconductor Corporation, 2019-2021.
+© Cypress Semiconductor Corporation (an Infineon company) or an affiliate of Cypress Semiconductor Corporation, 2019-2021.
