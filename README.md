@@ -2,7 +2,7 @@
 
 ## Overview
 
-The CY8CPROTO-062-4343W PSoC 6 Wi-Fi BT Prototyping Kit is a low-cost hardware platform that enables design and debug of PSoC 6 MCUs. It comes with a Murata LBEE5KL1DX module, based on the CYW4343W combo device, industry-leading CAPSENSE for touch buttons and slider, on-board debugger/programmer with KitProg3, microSD card interface, 512-Mb Quad-SPI NOR flash, PDM-PCM microphone, and a thermistor. This kit is designed with a snap-away form-factor, allowing the user to separate the different components and features that come with this kit and use independently. In addition, support for Digilent's Pmod interface is also provided with this kit.
+The CY8CPROTO-062-4343W PSoC™ 6 Wi-Fi BT Prototyping Kit is a low-cost hardware platform that enables design and debug of PSoC™ 6 MCUs. It comes with a Murata LBEE5KL1DX module, based on the CYW4343W combo device, industry-leading CAPSENSE™ for touch buttons and slider, on-board debugger/programmer with KitProg3, microSD card interface, 512-Mb Quad-SPI NOR flash, PDM-PCM microphone, and a thermistor. This kit is designed with a snap-away form-factor, allowing the user to separate the different components and features that come with this kit and use independently. In addition, support for Digilent's Pmod interface is also provided with this kit.
 
 ![](docs/html/board.png)
 
@@ -19,7 +19,7 @@ To use code from the BSP, simply include a reference to `cybsp.h`.
 
 ### Kit Contents:
 
-* PSoC 6 Wi-Fi BT Prototyping Board
+* PSoC™ 6 Wi-Fi BT Prototyping Board
 * USB Type-A to Micro-B cable
 * Quick Start Guide
 
@@ -35,6 +35,7 @@ Components:
 Defines:
 * CYBSP_WIFI_CAPABLE - This define, disabled by default, causes the BSP to initialize the interface to an onboard wireless chip if it has one.
 * CY_USING_HAL - This define, enabled by default, specifies that the HAL is intended to be used by the application. This will cause the BSP to include the applicable header file and to initialize the system level drivers.
+* CYBSP_CUSTOM_SYSCLK_PM_CALLBACK - This define, disabled by default, causes the BSP to skip registering its default SysClk Power Management callback, if any, and instead to invoke the application-defined function `cybsp_register_custom_sysclk_pm_callback` to register an application-specific callback.
 
 ### Clock Configuration
 
