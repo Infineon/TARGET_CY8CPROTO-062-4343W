@@ -14,7 +14,7 @@ To use code from the BSP, simply include a reference to `cybsp.h`.
 
 * Support of up to 2MB Flash and 1MB SRAM
 * Dedicated SDHC to interface with WICED wireless devices.
-* Delivers dual-cores, with a 150-MHz Arm Cortex-M4 as the primary application processor and a 100-MHz Arm Cortex-M0+ as the secondary processor for low-power operations.
+* Delivers dual-cores, with a 150-MHz Arm® Cortex®-M4 as the primary application processor and a 100-MHz Arm® Cortex®-M0+ as the secondary processor for low-power operations.
 * Supports Full-Speed USB, capacitive-sensing with CAPSENSE, a PDM-PCM digital microphone interface, a Quad- SPI interface, 13 serial communication blocks, 7 programmable analog blocks, and 56 programmable digital blocks.
 
 ### Kit Contents:
