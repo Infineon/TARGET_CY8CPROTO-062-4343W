@@ -2,9 +2,7 @@
 
 ## Overview
 
-The CY8CPROTO-062-4343W PSoC™ 6 Wi-Fi BT Prototyping Kit is a low-cost hardware platform that enables design and debug of PSoC™ 6 MCUs. It comes with a Murata LBEE5KL1DX module, based on the CYW4343W combo device, industry-leading CAPSENSE™ for touch buttons and slider, on-board debugger/programmer with KitProg3, microSD card interface, 512-Mb Quad- SPI NOR flash, PDM-PCM microphone, and a thermistor. This kit is designed with a snap-away form-factor, allowing the user to separate the different components and features that come with this kit and use independently. In addition, support for Digilent's Pmod interface is also provided with this kit.     
-**Note:**
-CY8CPROTO-062-4343W shares the same GPIO for the user button (USER BTN1) and the CYW4343W host wake up pin and it is connected to CYW4343W host wake up pin by default. So, in a Wi-Fi low power application,  the pin P0[4] cannot be used as a user button. If you wish to disable the host wake up feature in your application and use the user button, add the below line to the application Makefile: DEFINES+=CY_WIFI_HOST_WAKE_SW_FORCE=0.
+The CY8CPROTO-062-4343W PSOC™ 6 Wi-Fi BT Prototyping Kit is a low-cost hardware platform that enables design and debug of PSOC™ 6 MCUs. It comes with a Murata LBEE5KL1DX module, based on the CYW4343W combo device, industry-leading CAPSENSE™ for touch buttons and slider, on-board debugger/programmer with KitProg3, microSD card interface, 512-Mb Quad- SPI NOR flash, PDM-PCM microphone, and a thermistor. This kit is designed with a snap-away form-factor, allowing the user to separate the different components and features that come with this kit and use independently. In addition, support for Digilent's Pmod interface is also provided with this kit.
 
 ![](docs/html/board.png)
 
@@ -21,7 +19,7 @@ To use code from the BSP, simply include a reference to `cybsp.h`.
 
 ### Kit Contents:
 
-* PSoC™ 6 Wi-Fi BT Prototyping Board
+* PSOC™ 6 Wi-Fi BT Prototyping Board
 * USB Type-A to Micro-B cable
 * Quick Start Guide
 
